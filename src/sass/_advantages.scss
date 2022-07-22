@@ -1,0 +1,28 @@
+.hidden {
+    display: none;
+}
+
+.container {
+    width: 320px;
+}
+
+.advantages {
+    padding-left: 20px;
+    padding-right: 70px;
+}
+
+.advantages-title {
+font-family: 'Titan One';
+font-size: 36px;
+line-height: 1.14;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: var(--title-color);
+}
+
+.advantages-descr {
+font-family: 'DM Sans';
+font-weight: 700;
+font-size: 12px;
+line-height: 1.7;
+}
