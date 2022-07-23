@@ -1,5 +1,6 @@
 .footer {
     padding-top: 40px;
+    padding-bottom: 3px;
     background:#FFF5F6;
 }
 
@@ -34,8 +35,8 @@ ul{
 .container {
     padding-left: 20px;
     padding-right: 20px;
-    
 }
+
 
 .footer__title {
     font-family: 'Titan One';
@@ -64,6 +65,12 @@ ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    &::after {
+        content: '';
+        border: 1px solid #E1E1E1;
+        width: 100vw;
+        margin:0 -20px;        
+    }
 }
 
 .social__list {
@@ -92,6 +99,7 @@ ul{
 .footer__address {
     display: flex;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .footer-address__text {
@@ -111,6 +119,17 @@ ul{
     font-size: 12px;
     line-height: 1.83;
     color: #D41443;
+}
+
+.end__text {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: #907E82;
+    margin-top: 16px;
 }
 
 
