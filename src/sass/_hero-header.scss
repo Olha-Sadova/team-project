@@ -1,6 +1,10 @@
 .page-header {
   background-color: #ffb8ca;
 }
+.container {
+  min-width: 320px;
+  padding: 0 15px;
+}
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -9,7 +13,7 @@
 .header-nav {
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 5px;
   padding-right: 20px;
   padding-top: 8px;
 }
@@ -28,26 +32,29 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding: 0;
 }
 
 .mobile-close-button {
   background-color: transparent;
   border-color: transparent;
   top: 20px;
-  right: 20px;
+  right: 5px;
+  width: 14px;
+  height: 14px;
   display: flex;
   position: absolute;
   justify-content: center;
   align-items: center;
 }
-.mobile-button-icon {
-  fill: var(--white);
-}
 
 .mobile-button-buy {
   width: 209px;
   height: 44px;
-  background-color: #fff;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--white);
   border: 1px solid transparent;
   border-radius: 22px;
   font-family: DM Sans;
