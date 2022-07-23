@@ -91,7 +91,7 @@
 }
 
 .products__name {
-  position: relative;
+  //   position: relative;
   margin-top: 120px;
   margin-bottom: 70px;
   font-size: 20px;
@@ -101,11 +101,13 @@
 
 .products__name::after {
   position: absolute;
+  display: block;
   content: '';
   width: 26px;
   height: 6px;
-  top: 51px;
+  top: 215px;
   left: 50%;
+
   background-color: transparent;
   background-image: url(../images/3-dots.png);
   @media (min-device-pixel-ratio: 2),
