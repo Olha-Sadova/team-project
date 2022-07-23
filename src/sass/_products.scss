@@ -52,7 +52,7 @@
 }
 
 .products__item:nth-child(1) {
-  background: var(--primary-bg-color);
+  background-color: var(--primary-bg-color);
   &::before {
     background-image: url(../images/product-mobile-1.png);
     @media (min-device-pixel-ratio: 2),
@@ -65,7 +65,7 @@
 }
 
 .products__item:nth-child(2) {
-  background: var(--fourth-bg-color);
+  background-color: var(--fourth-bg-color);
   &::before {
     background-image: url(../images/product-mobile-2.png);
     @media (min-device-pixel-ratio: 2),
@@ -78,7 +78,7 @@
 }
 
 .products__item:nth-child(3) {
-  background: var(--fifth-bg-color);
+  background-color: var(--fifth-bg-color);
   &::before {
     background-image: url(../images/product-mobile-3.png);
     @media (min-device-pixel-ratio: 2),
@@ -91,7 +91,6 @@
 }
 
 .products__name {
-  //   position: relative;
   margin-top: 120px;
   margin-bottom: 70px;
   font-size: 20px;
