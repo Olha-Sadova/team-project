@@ -1,19 +1,19 @@
 :root {
-    --primary-bg-color: #FFB8CA;
-    --second-bg-color: #FFF5F6;
-    --third-bg-color: #E5E5E5;
-    --fourth-bg-color: #F0D1A5;
-    --fifth-bg-color: #C2E297;
-    --title-color: #D41443;
-    --white: #ffffff;
-    --black: #000000;
-    --text-color: #907E82;
-    --circle: #FFA5BA;
-    --bg-mobile: #E17992;
-    --ft-icons: #FEA5BB;
+  --primary-bg-color: #ffb8ca;
+  --second-bg-color: #fff5f6;
+  --third-bg-color: #e5e5e5;
+  --fourth-bg-color: #f0d1a5;
+  --fifth-bg-color: #c2e297;
+  --title-color: #d41443;
+  --white: #ffffff;
+  --black: #000000;
+  --text-color: #907e82;
+  --circle: #ffa5ba;
+  --bg-mobile: #e17992;
+  --ft-icons: #fea5bb;
 }
 $mobile: 320px;
 $tablet: 768px;
-$desctop: 1200px
+$desktop: 1200px;
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap');
