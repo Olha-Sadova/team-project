@@ -14,17 +14,14 @@
   margin-top: 0;
   margin-bottom: 0;
   color: var(--circle);
-  font-size: 18px;
-  line-height: 1.17;
+  @include font(null, 18px, 1.17, null);
 }
 
 .products__title {
   margin-top: 15px;
   margin-bottom: 8px;
   color: var(--title-color);
-  font-size: 34px;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
+  @include font(null, 34px, 1.15, 0.04em);
 }
 
 .products__item {
@@ -52,10 +49,7 @@
   background-color: var(--primary-bg-color);
   &::before {
     background-image: url(../images/product-mobile-1.png);
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include retina {
       background-image: url('../images/product-mobile-1@2x.png');
     }
   }
@@ -65,10 +59,7 @@
   background-color: var(--fourth-bg-color);
   &::before {
     background-image: url(../images/product-mobile-2.png);
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include retina {
       background-image: url('../images/product-mobile-2@2x.png');
     }
   }
@@ -78,10 +69,7 @@
   background-color: var(--fifth-bg-color);
   &::before {
     background-image: url(../images/product-mobile-3.png);
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include retina {
       background-image: url('../images/product-mobile-3@2x.png');
     }
   }
@@ -90,9 +78,7 @@
 .products__name {
   margin-top: 120px;
   margin-bottom: 70px;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
+  @include font(null, 20px, 1.15, 0.04em);
   &::after {
     position: absolute;
     display: block;
@@ -106,10 +92,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(../images/3-dots.png);
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include retina {
       background-image: url('../images/3-dots@2x.png');
     }
     transform: translateX(-50%);
@@ -120,10 +103,7 @@
   margin-top: 0;
   margin-bottom: 32px;
   font-family: 'DM Sans';
-  font-size: 14px;
-  line-height: 1.52;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  @include font(700, 14px, 1.52, 0.04em);
 }
 
 .products__button {
