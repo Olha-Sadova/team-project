@@ -10,39 +10,47 @@ ul {
   background-image: linear-gradient(#fafafa 0 25%, #fff5f6 25% 100%);
 }
 
+.contacts__title {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .contacts-container {
-  padding-top: 70px;
-  padding-bottom: 32px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 70px 20px 22px;
+  width: 100%;
+  margin: 0 auto;
+  @media screen and (min-width: 320px) {
+    width: 320px;
+  }
 }
 
-.contact-div {
+.contacts-div {
   padding: 40px 32px 40px 32px;
-}
-
-.contacts-cards {
-  padding: 0;
-  margin: 0;
 }
 
 .contacts-cards__item {
   background-color: rgba(255, 255, 255, 1);
-  box-shadow: rgba(212, 20, 67, 0.1);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   height: 412px;
   width: 280px;
-  margin: 0;
-  margin-bottom: 10px;
   border-radius: 24px;
+  margin-bottom: 10px;
 }
 
 .contacts-cards__item:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 32px;
 }
 
 .contacts-list__place {
   background-color: var(--fourth-bg-color);
-  color: var(--white);
+  color: #ffffff;
   width: 80px;
   height: 16px;
   text-align: center;
@@ -87,21 +95,24 @@ ul {
 }
 
 .contacts-list {
-  margin-top: 24px;
-}
-
-.contact-list {
-  margin-top: 20px;
-}
-
-.contacts-list__item {
-  margin-bottom: 8px;
-}
-
-.contacts-list__item--grey {
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-bottom: 1px solid rgba(225, 225, 225, 1);
   width: 216px;
-  padding-bottom: 24px;
+}
+
+.contacts-list-firstpart {
+  padding-top: 20px;
+}
+
+.contacts-list-tel {
+  padding-top: 24px;
+  padding-bottom: 40px;
+  border-bottom: none;
+}
+
+.contacts-list__item:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .contacts-list__day {
@@ -122,10 +133,6 @@ ul {
   line-height: 186%;
 }
 
-.contacts-list__tel {
-  margin-bottom: 8px;
-}
-
 .mail,
 .tel {
   color: var(--text-color);
@@ -141,16 +148,21 @@ ul {
   color: rgba(243, 33, 191, 0.553);
 }
 
+.contacts-list-tel {
+  padding-bottom: 40px;
+}
+
 .buttons-contacts {
-  padding: 0 78px 78px 40px;
-  margin: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .buttons-contacts__item {
   margin-bottom: 10px;
-  margin-right: 0;
-  width: 161px;
-  height: 44px;
+}
+
+.buttons-contacts__item:last-child {
+  margin-bottom: 0;
 }
 
 .buttons-contacts__locations {
@@ -183,7 +195,7 @@ ul {
 
 .buttons-contacts__vector {
   margin-left: 8px;
-  fill: #ffffff;
+  fill: var(--white);
 }
 .franchise {
   fill: #d41443;
