@@ -1,0 +1,17 @@
+.gl {
+    width: 320px;
+    padding: 0;
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom, #FFF5F6 19%, #FFFFFF 19%);
+    &__title {
+        display: none;
+        font-family: 'Titan One';
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: var(--title-color);
+    }
+}
+
