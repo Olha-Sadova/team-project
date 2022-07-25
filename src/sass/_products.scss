@@ -25,21 +25,20 @@
 
 .products__pretitle {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   color: var(--circle);
 
   @include tablet {
+    margin-bottom: 18px;
     @include font(null, 26px, 1.15, null);
   }
 }
 
 .products__title {
-  margin-top: 15px;
   margin-bottom: 8px;
   color: var(--title-color);
   @include font(null, 34px, 1.15, 0.04em);
   @include tablet {
-    margin-top: 18px;
     margin-bottom: 20px;
     font-size: 48px;
   }
@@ -72,9 +71,7 @@
     transform: translate(-50%, -50%);
   }
   @include tablet {
-    margin-top: 138px;
     padding: 40px 32px;
-    // width: calc((100% - 32px) / 2);
     &::before {
       max-width: 224px;
       width: 100%;
@@ -133,7 +130,6 @@
 
 .products__name {
   margin-top: 120px;
-  margin-bottom: 70px;
   @include font(null, 20px, 1.15, 0.04em);
   &::after {
     position: absolute;
@@ -159,8 +155,7 @@
 }
 
 .products__text {
-  margin-top: 0;
-  margin-bottom: 32px;
+  margin-top: 70px;
   font-family: 'DM Sans';
   @include font(700, 14px, 1.52, 0.04em);
   @include tablet {
@@ -170,6 +165,7 @@
 
 .products__button {
   margin: 0 auto;
+  margin-top: 32px;
   width: 40px;
   height: 40px;
   background-color: var(--white);
