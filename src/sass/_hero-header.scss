@@ -2,22 +2,17 @@
   background-color: var(--primary-bg-color);
 }
 .header-hero__container {
-  width: 320px;
+  min-width: 320px;
   padding: 0 20px;
+  overflow: hidden;
   @include tablet {
     display: flex;
     min-width: 768px;
-    height: 416pxpx;
+    height: 416px;
     padding: 0 32px;
   }
 }
-.header__container {
-  min-width: 320px;
-  padding: 0 20px;
-  @include tablet {
-    display: none;
-  }
-}
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -111,7 +106,6 @@
   position: relative;
   padding-top: 25px;
   padding-bottom: 0;
-  overflow: hidden;
 
   @include tablet {
     position: initial;
@@ -132,6 +126,7 @@
 .hero__title-wrap {
   position: absolute;
   z-index: 1;
+  top: 136px;
   @include tablet {
     left: 32px;
     top: 102px;
@@ -140,7 +135,6 @@
 .hero__title {
   display: block;
   width: 218px;
-  padding-top: 136px;
   font-family: 'Titan One';
   @include font(null, 48px, 0.95, 0.04em);
   text-transform: uppercase;
