@@ -8,8 +8,7 @@
     padding: 0;
     margin: 0 auto;        
     
-   
-    
+      
     @include desktop {       
         padding: 0 94px;
     }        
@@ -23,8 +22,6 @@
         text-align: center;
         letter-spacing: 0.04em;
         color: var(--title-color);
-    }
-
-    
+    }    
 }
 
