@@ -1,5 +1,6 @@
 .page-header {
   background-color: var(--primary-bg-color);
+  height: 416px;
 }
 .header-hero__container {
   min-width: 320px;
@@ -116,7 +117,7 @@
 }
 .hero__container {
   min-width: 320px;
-  padding: 0 20px;
+  padding: 0;
   @include tablet {
     min-width: inherit;
     padding: 0;
@@ -270,7 +271,9 @@
   @include tablet {
     display: flex;
     flex-direction: column;
-    margin-top: 92px;
+    position: absolute;
+    top: 92px;
+    right: 32px;
   }
 }
 
