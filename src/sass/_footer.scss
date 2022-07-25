@@ -1,7 +1,5 @@
 .footer {
     padding-bottom: 3px;
-    padding-left: 20px;
-    padding-right: 20px;
     background:#FFF5F6;
     
     
@@ -14,6 +12,7 @@
 .link {
     text-decoration: none;
 }
+
 img {
     display: block;
     width: 100%;
@@ -35,6 +34,26 @@ ul{
     padding-left: 0;
 }
 
+    .footer_container {
+        padding-left: 20px;
+        padding-right: 20px;
+        // max-width: 320px;
+    }
+
+    .footer__container {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .pre-title__container {
+        max-width: 232px;
+        @include tablet {
+            max-width: 340px;
+        }
+    }
+
 
 .footer__title {
     font-family: 'Titan One';
@@ -44,7 +63,12 @@ ul{
     line-height: 1.16;
     text-transform: uppercase;
     color: #FFA5BA;
-    max-width: 232px;
+
+    @include tablet {
+        font-size: 26px;
+        line-height: 1.15;
+        letter-spacing: 0.04em;
+    }
 }
 
 .footer__text {
@@ -57,7 +81,13 @@ ul{
     text-transform: uppercase;
     color: #D41443;
     margin-top: 16px;
-    max-width: 200px;
+
+    @include tablet {
+        font-size: 48px;
+        line-height: 1.14;
+        letter-spacing: 0.06em;
+        margin-top: 12px;
+    }
 }
 
 .social__container {
@@ -65,16 +95,22 @@ ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    &::after {
-        content: '';
-        border: 1px solid #E1E1E1;
-        width: 100vw;
-        margin:0 -20px;        
+    // &::after {
+    //     content: '';
+    //     border: 1px solid #E1E1E1;
+    //     width: 100vw;
+    //     margin:0 -20px;        
+    // }
+    @include tablet {
+        margin-top: 60px;
+        display: block;
+
     }
 }
 
 .social__list {
     display: flex;
+    justify-content: flex-end;
 }
 
 
@@ -83,6 +119,10 @@ ul{
     height: 32px;
     &:not(:last-child){
         margin-right: 28.24px;
+    }
+    @include tablet {
+        width: 34px;
+        height: 34px;
     }
 }
 
@@ -100,6 +140,9 @@ ul{
     display: flex;
     margin-top: 40px;
     margin-bottom: 40px;
+    @include tablet {
+        margin-bottom: 60px;
+    }
 }
 
 .footer-address__text {
@@ -110,6 +153,10 @@ ul{
     line-height: 1.83;
     color: #000000;
     margin-right: 3px;
+    @include tablet {
+        font-size: 14px;
+        line-height: 1.86;
+    }
 }
 
 .footer-tel__link {
@@ -119,16 +166,37 @@ ul{
     font-size: 12px;
     line-height: 1.83;
     color: #D41443;
+    @include tablet {
+        font-size: 14px;
+        line-height: 1.86;
+    }
+}
+
+.footer-line {
+    max-width: 1167px;
+    height: 0;
+    border: 1px solid #e1e1e1;
+    margin: 0 -20px;
 }
 
 .end__text {
+    text-align: center;
+    color: #907e82;
+    margin-top: 16px;
     font-family: 'DM Sans';
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
     line-height: 1.5;
-    text-align: center;
-    color: #907E82;
-    margin-top: 16px;
+    @include tablet {
+        font-size: 14px;
+        line-height: 1.85;
+        letter-spacing: 0.02em;
+    }
+}
+br {
+    @include tablet {
+        display: none;
+    }
 }
 
