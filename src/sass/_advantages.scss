@@ -6,10 +6,13 @@
     @media screen and (min-width: $mobile) {
         margin: 0 auto;
     }
+    @media screen and (min-width: $tablet) {
+        margin: 0;
+    }
 }
 
 .advantages {
-    width: 100vw;
+    width: 100%;
     background-color: var(--second-bg-color);
     padding-bottom: 60px;
     padding-top: 40px;
