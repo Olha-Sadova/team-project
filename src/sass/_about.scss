@@ -48,7 +48,7 @@
     }
   }
 
-  &__main {
+  .container {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -134,7 +134,7 @@
             font-size: 14px;
             letter-spacing: .052em;
         }
-        strong {
+        bold {
             color: #000;
             line-height: 1.76;
             font-weight: 500;
