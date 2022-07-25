@@ -1,14 +1,16 @@
+.gallery {
+    background-image: linear-gradient(to bottom, #FFF5F6 19%, #FAFAFA 19%);
+
+}
+
 .gl {
     width: 100%;
     padding: 0;
     margin: 0 auto;        
     
-    @include tablet {
-        max-width: 768px;
-    }
+   
     
-    @include desktop {
-        max-width: 1200px;
+    @include desktop {       
         padding: 0 94px;
     }        
 
@@ -23,8 +25,6 @@
         color: var(--title-color);
     }
 
-    &__image {
-        background-image: linear-gradient(to bottom, #FFF5F6 19%, #FAFAFA 19%);
-    }
+    
 }
 
