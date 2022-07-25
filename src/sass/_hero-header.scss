@@ -187,7 +187,7 @@
   width: 82.8px;
 }
 .hero__btn-link {
-  font-family: 'DM Sans';
+  font-family: 'DM Sans', sans-serif;
   @include font(null, 8px, 1.25, null);
   display: block;
   align-items: center;
@@ -249,7 +249,7 @@
 }
 .hero__legend {
   display: block;
-  font-family: 'DM Sans';
+  font-family: 'DM Sans', sans-serif;
   @include font(null, 8px, 1.5, null);
   color: var(--white);
 }
@@ -307,7 +307,7 @@
   color: var(--title-color);
 }
 .hero__counter-text {
-  font-family: 'DM Sans';
+  font-family: 'DM Sans', sans-serif;
   @include font(null, 8px, 1.25, null);
   text-align: right;
   color: var(--white);
