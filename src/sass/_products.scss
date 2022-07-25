@@ -1,10 +1,17 @@
 .products {
   margin: 0 auto;
-  padding: 60px 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
   background-color: var(--white);
+}
+
+.products__container {
+  padding-left: 20px;
+  padding-right: 20px;
   @include tablet {
-    padding: 60px 32px;
+    padding-left: 32px;
+    padding-right: 32px;
     width: 768px;
   }
 }
