@@ -9,7 +9,7 @@ var swiper = new Swiper('.mySwiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  effect: 'cube',
+   effect: 'cube',
   cubeEffect: {
     slideShadows: false,
   },
