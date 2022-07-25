@@ -1,5 +1,4 @@
 .products {
-  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
@@ -7,6 +6,7 @@
 }
 
 .products__container {
+  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
   @include tablet {
@@ -74,6 +74,7 @@
   @include tablet {
     margin-top: 138px;
     padding: 40px 32px;
+    // width: calc((100% - 32px) / 2);
     &::before {
       max-width: 224px;
       width: 100%;
