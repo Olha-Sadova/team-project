@@ -1,8 +1,17 @@
 .gl {
     width: 100%;
     padding: 0;
-    margin: 0 auto;
-    background-image: linear-gradient(to bottom, #FFF5F6 19%, #FAFAFA 19%);
+    margin: 0 auto;        
+    
+    @include tablet {
+        max-width: 768px;
+    }
+    
+    @include desktop {
+        max-width: 1200px;
+        padding: 0 94px;
+    }        
+
     &__title {
         display: none;
         font-family: 'Titan One';
@@ -12,6 +21,10 @@
         text-align: center;
         letter-spacing: 0.04em;
         color: var(--title-color);
+    }
+
+    &__image {
+        background-image: linear-gradient(to bottom, #FFF5F6 19%, #FAFAFA 19%);
     }
 }
 
