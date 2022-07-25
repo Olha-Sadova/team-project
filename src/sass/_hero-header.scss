@@ -1,19 +1,18 @@
-.page-header {
+/*.page-header {
   background-color: var(--primary-bg-color);
-  height: 416px;
 }
-.header-hero__container {
+.header__container {
+  position: fixed;
   min-width: 320px;
-  padding: 0 20px;
-  overflow: hidden;
+  padding: 8px 20px 25px 20px;
+  z-index: 1;
   @include tablet {
-    display: flex;
-    min-width: 768px;
-    height: 416px;
-    padding: 0 32px;
+    min-width: 768 px;
+    padding-top: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
-
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -100,27 +99,23 @@
     color: var(--title-color);
   }
 }
-
+*/
 .hero {
   background-color: var(--primary-bg-color);
+  min-width: 320px;
+  padding: 25px 20px 0 20px;
   height: 444px;
   position: relative;
-  padding-top: 25px;
-  padding-bottom: 0;
-
+  overflow: hidden;
   @include tablet {
-    position: initial;
-    width: 768px;
+    min-width: 768px;
     height: 416px;
-    padding-top: 0;
+    padding-top: 43px;
   }
-}
-.hero__container {
-  min-width: 320px;
-  padding: 0;
-  @include tablet {
-    min-width: inherit;
-    padding: 0;
+  @include desktop {
+    min-width: 1200px;
+    height: 664px;
+    padding: 54px 16px 0 16px;
   }
 }
 
@@ -128,9 +123,14 @@
   position: absolute;
   z-index: 1;
   top: 136px;
+  left: 20px;
   @include tablet {
     left: 32px;
     top: 102px;
+  }
+  @include desktop {
+    left: 16px;
+    top: 147px;
   }
 }
 .hero__title {
@@ -143,7 +143,10 @@
   @include tablet {
     @include font(null, 34px, 0.91, 0.04em);
     width: 162px;
-    padding-top: 20px;
+  }
+  @include desktop {
+    @include font(null, 58px, 0.9, 0.04em);
+    width: 277px;
   }
 }
 .hero__pretitle {
@@ -156,38 +159,63 @@
   @include tablet {
     @include font(null, 22px, 1.14, 0.04em);
   }
+  @include desktop {
+    @include font(null, 38px, 1.16, null);
+  }
 }
 .hero__list {
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
+  @include desktop {
+    margin-top: 24px;
+  }
 }
 .hero__item {
   &:not(:last-child) {
     margin-right: 8px;
+    @include desktop {
+      margin-right: 12px;
+    }
   }
 }
 .hero__btn {
-  border-color: transparent;
   border-radius: 20px;
   height: 24px;
-}
-.hero__btn#products {
-  background-color: var(--title-color);
-  color: var(--white);
-  width: 61.2px;
-}
-.hero__btn#about {
-  background-color: var(--white);
-  color: var(--title-color);
-  width: 82.8px;
-}
-.hero__btn-link {
   font-family: 'DM Sans', sans-serif;
   @include font(null, 8px, 1.25, null);
   display: block;
   align-items: center;
   text-align: center;
+  @include transition(background-color);
+  @include desktop {
+    height: 40px;
+    @include font(null, 14px, 1.29, null);
+  }
+}
+.hero__btn#products {
+  background-color: var(--title-color);
+  color: var(--white);
+  width: 61.2px;
+  &:hover,
+  &:focus {
+    background-color: var(--circle);
+  }
+  @include desktop {
+    width: 107px;
+  }
+}
+.hero__btn#about {
+  background-color: var(--white);
+  color: var(--title-color);
+  width: 82.8px;
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+  @include desktop {
+    width: 138px;
+  }
 }
 .circle {
   background-color: var(--circle);
@@ -203,9 +231,16 @@
     left: 248px;
     top: 43px;
   }
+  @include desktop {
+    width: 534px;
+    height: 534px;
+    left: 517px;
+    top: 54px;
+  }
 }
 .hero__img-wrap {
   position: absolute;
+
   top: 34px;
   left: 102px;
   width: 171px;
@@ -216,6 +251,12 @@
     top: 80px;
     width: 143px;
     height: 336px;
+  }
+  @include desktop {
+    width: 236px;
+    height: 557px;
+    left: 636px;
+    top: 108px;
   }
 }
 .hero__img {
@@ -232,6 +273,12 @@
     left: 32px;
     top: 246px;
   }
+  @include desktop {
+    width: 213px;
+    height: 216px;
+    left: 16px;
+    top: 388px;
+  }
 }
 .hero__legend-wrap {
   display: none;
@@ -242,12 +289,20 @@
     left: 184px;
     top: 287px;
   }
+  @include desktop {
+    width: 200px;
+    left: 229px;
+    top: 456px;
+  }
 }
 .hero__legend {
   display: block;
   font-family: 'DM Sans', sans-serif;
   @include font(null, 8px, 1.5, null);
   color: var(--white);
+  @include desktop {
+    @include font(null, 14px, 1.29, null);
+  }
 }
 .hero__legend-btn {
   display: flex;
@@ -258,12 +313,21 @@
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  @include desktop {
+    width: 26px;
+    height: 26px;
+    margin-top: 20px;
+  }
 }
 .hero__legend-icon {
   display: block;
   align-items: center;
   justify-content: center;
   fill: var(--title-color);
+  @include desktop {
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .hero__counter-list {
@@ -275,15 +339,25 @@
     top: 92px;
     right: 32px;
   }
+  @include desktop {
+    top: 152px;
+    right: 16px;
+  }
 }
 
 .hero__counter-item {
   position: relative;
   z-index: 0;
   margin-right: 8px;
+  @include desktop {
+    margin-right: 18px;
+  }
   &:not(:last-child) {
     margin-bottom: 16px;
     display: block;
+    @include desktop {
+      margin-bottom: 26px;
+    }
   }
 }
 .hero__mini-circle {
@@ -291,8 +365,8 @@
   z-index: -1;
   top: -4px;
   right: -5px;
-  width: 16px;
-  height: 16px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: var(--white);
   transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -303,12 +377,18 @@
   text-align: right;
   text-transform: uppercase;
   color: var(--title-color);
+  @include desktop {
+    @include font(null, 46px, 1.15, null);
+  }
 }
 .hero__counter-text {
   font-family: 'DM Sans', sans-serif;
   @include font(null, 8px, 1.25, null);
   text-align: right;
   color: var(--white);
+  @include desktop {
+    @include font(null, 14px, 1.29, null);
+  }
 }
 .hero__tasty-img-wrap {
   display: none;
@@ -319,5 +399,11 @@
     height: 150px;
     right: 32px;
     top: 265px;
+  }
+  @include desktop {
+    width: 304px;
+    height: 241px;
+    right: 16px;
+    top: 423px;
   }
 }
