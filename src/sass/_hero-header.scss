@@ -1,9 +1,6 @@
 .page-header {
   background-color: var(--primary-bg-color);
   width: 100%;
-}
-
-.header-hero__container {
   background-color: var(--primary-bg-color);
   position: fixed;
   top: 0;
@@ -13,9 +10,7 @@
   overflow: hidden;
   margin: 0 auto;
 }
-.header__container {
-  width: 100%;
-}
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -194,20 +189,22 @@
 
 .hero {
   background-color: var(--primary-bg-color);
-  min-width: 320px;
-  padding: 25px 20px 0 20px;
+  width: 100%;
+  // padding: 25px 20px 0 20px;
+  padding-top: 25px;
   height: 502px;
   position: relative;
   overflow: hidden;
   @include tablet {
-    min-width: 768px;
+    // min-width: 768px;
     height: 416px;
     padding-top: 43px;
   }
   @include desktop {
-    min-width: 1200px;
+    // min-width: 1200px;
     height: 664px;
-    padding: 54px 16px 0 16px;
+    // padding: 54px 16px 0 16px;
+    padding-top: 54px;
   }
 }
 
