@@ -1749,6 +1749,11 @@ ul {
   padding-bottom: 3px;
   background-color: #FFF5F6;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-bottom: 4px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer {
     padding-top: 80px;
