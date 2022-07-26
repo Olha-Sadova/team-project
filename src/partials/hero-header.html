@@ -70,7 +70,7 @@
     </div>
   </div>
   </header>
-  <section class="hero">
+ <section class="hero">
     <div class="hero__container">
       <div class="hero__title-wrap">
         <h1 class="hero__title">
@@ -80,12 +80,12 @@
         <ul class="hero__list list">
           <li class="hero__item">
             <button type="button" class="hero__btn" id="products">
-              <a href="" class="hero__btn-link link">Products</a>
+              <a name="#products-scroll" class="hero__btn-link link">Products</a>
             </button>
           </li>
           <li class="hero__item">
             <button type="button" class="hero__btn" id="about">
-              <a href="" class="hero__btn-link link">How it’s made?</a>
+              <a name="#aboout-scroll" class="hero__btn-link link">How it’s made?</a>
             </button>
           </li>
         </ul>
@@ -109,6 +109,14 @@
             media="(min-width: 768px)"
             type="image/png"
           />
+          <source
+            srcset="
+              ../src/images/hero-icecream-dt.png    1x,
+              ../src/images/hero-icecream-dt-x2.png 2x
+            "
+            media="(min-width: 1200px)"
+            type="image/png"
+          />
           <img
             src="../src/images/hero-icecream-mob.png"
             alt="ice-cream"
@@ -117,7 +125,9 @@
         </picture>
       </div>
       <div class="hero__legend-wrap">
-        <p class="hero__legend">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <p class="hero__legend">Do you think about the composition of our ice cream?
+Don’t care about it. 
+ICECREAM use only 100% organic milk for produced our product.</p>
         <button type="butto" class="hero__legend-btn">
           <svg class="hero__legend-icon"width="7" height="7"><use href="./images/image.svg#icon-arrow"></use></svg>
         </button>
@@ -130,6 +140,14 @@
               ../src/images/hero-milk-tab-x2.png 2x
             "
             media="(min-width: 768px)"
+            type="image/png"
+          />
+           <source
+            srcset="
+              ../src/images/hero-milk-dt.png    1x,
+              ../src/images/hero-milk-dt-x2.png 2x
+            "
+            media="(min-width: 1200px)"
             type="image/png"
           />
           <img
@@ -153,6 +171,14 @@
             media="(min-width: 768px)"
             type="image/png"
           />
+          <source
+            srcset="
+              ../src/images/hero-tasty-dt.png    1x,
+              ../src/images/hero-tasty-dt-x2.png 2x
+            "
+            media="(min-width: 1200px)"
+            type="image/png"
+          />
           <img
             src="../src/images/hero-tasty-tab.png"
             alt="so tasty"
@@ -162,6 +188,5 @@
       </div>
     </div>
   </div>
-
-  </section>-->
+  </section>
 
