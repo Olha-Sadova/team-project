@@ -251,6 +251,7 @@
   animation: tada;
   animation-duration: 3000ms;
 }
+
 .hero__pretitle {
   display: block;
   font-family: 'Titan One';
@@ -274,6 +275,23 @@
   }
 }
 .hero__item {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  height: 24px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-family: 'DM Sans', sans-serif;
+  @include font(null, 8px, 1.25, null);
+  @include transition(background-color);
+  @include desktop {
+    height: 40px;
+    @include font(null, 14px, 1.29, null);
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
   &:not(:last-child) {
     margin-right: 8px;
     @include desktop {
@@ -281,21 +299,7 @@
     }
   }
 }
-.hero__btn {
-  border-radius: 20px;
-  height: 24px;
-  font-family: 'DM Sans', sans-serif;
-  @include font(null, 8px, 1.25, null);
-  display: block;
-  align-items: center;
-  text-align: center;
-  @include transition(background-color);
-  @include desktop {
-    height: 40px;
-    @include font(null, 14px, 1.29, null);
-  }
-}
-.hero__btn#products {
+.hero__item#products {
   background-color: var(--title-color);
   color: var(--white);
   width: 61.2px;
@@ -307,7 +311,7 @@
     width: 107px;
   }
 }
-.hero__btn#about {
+.hero__item#about {
   background-color: var(--white);
   color: var(--title-color);
   width: 82.8px;
