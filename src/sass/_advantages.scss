@@ -23,7 +23,6 @@
     gap: 32px;
     @media screen and (min-width: $tablet) {
         flex-direction: row;
-        // justify-content: flex-start;
         gap: 4px;
     }
     @media screen and (min-width: $desktop) {
