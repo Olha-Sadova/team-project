@@ -1,6 +1,5 @@
 .page-header {
   background-color: var(--primary-bg-color);
-  height: 416px;
   width: 100%;
 }
 
@@ -11,13 +10,8 @@
   z-index: 100;
 
   width: 100%;
-  padding: 0 20px;
   overflow: hidden;
-  /*@include tablet {
-    display: flex;
-    min-width: 768px;
-    padding: 0 32px;
-  }*/
+  margin: 0 auto;
 }
 .header__container {
   width: 100%;
@@ -29,6 +23,7 @@
 }
 .header-nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-top: 8px;
 }
@@ -153,7 +148,7 @@
   width: 209px;
   height: 44px;
   margin-top: 60px;
-  margin-right: auto;
+  margin-right: 16px;
   margin-left: auto;
   padding: auto;
   background-color: var(--white);
