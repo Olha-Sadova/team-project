@@ -1,22 +1,27 @@
 .page-header {
   background-color: var(--primary-bg-color);
+  height: 416px;
+   width: 100%;
+    
 }
+
 .header-hero__container {
-  width: 320px;
-  padding: 0 20px;
-  @include tablet {
+    background-color: var(--primary-bg-color);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+   padding: 0 20px;
+   overflow: hidden;
+  /*@include tablet {
     display: flex;
     min-width: 768px;
-    height: 416pxpx;
     padding: 0 32px;
-  }
+  }*/
 }
-.container {
-  min-width: 320px;
-  padding: 0 20px;
-  @include tablet {
-    display: none;
-  }
+.header__container{
+    width: 100%;
 }
 .is-hidden {
   opacity: 0;
@@ -29,10 +34,92 @@
   padding-top: 8px;
 }
 
+.header-wrap{
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+    @media screen and (min-width: $tablet) {
+        display: none;
+    } 
+     @media screen and (min-width: $desktop) {
+        display: flex;
+    } 
+}
+
 .header-mobile-menu {
   background-color: transparent;
   border-color: transparent;
-  margin-left: 61px;
+  margin-left: auto;
+  @media screen and (min-width: $tablet) {
+    margin-left: 293px;
+  }
+   @media screen and (min-width: $desktop) {
+        display: none;     
+  } 
+}
+
+.header-menu-list{
+    display: flex;
+    margin-left: 128px;
+}
+
+.header-menu-link{
+    font-family: 'DM Sans', sans-serif;
+    @include font(700, 16px, 1.31, null); 
+    color: var(--white);
+    &:hover, 
+    &:focus{
+      color: var(--title-color);
+    }
+    @mixin transition($tp) {
+    transition: color var(--primary-transition-time) var(--primary-cubic-function);
+}
+}
+
+.header-menu-link.current{
+    color: var(--title-color);
+}
+
+.header-menu-item:not(:last-child){
+    margin-right: 35px;
+}
+
+.mob-btn-buy{
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+    @media screen and (min-width: $tablet) {
+       font-family: 'DM Sans', sans-serif;
+       @include font(700, 16px, 1.31, null);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: var(--title-color);
+       border: none;
+       cursor: pointer;
+       width: 160px;
+       height: 44px;
+       border-radius: 22px;
+       background-color: var(--white);
+       right: 0;
+       margin-left: 32px;
+       &:hover,
+       &:focus{
+        background-color: #E1E1E1;
+       }
+       @mixin transition($tp) {
+       transition: background-color var(--primary-transition-time) var(--primary-cubic-function);
+}
+    }
+    @media screen and (min-width: $desktop) {
+       margin-left: auto;
+       right: 0; 
+    }
+}
+
+.button-buy-icon{
+    top: 19px;
+    margin-left: 25px;
 }
 
 .mobile-menu {
@@ -43,7 +130,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 0;
+  padding: 20px;
 }
 
 .mobile-close-button {
@@ -80,11 +167,11 @@
   text-align: center;
   align-items: center;
 }
-.header-menu-list {
+.header-mob-list {
   display: block;
   margin-top: 62px;
 }
-.header-menu-item {
+.header-mob-item {
   display: flex;
   align-items: center;
   width: 100%;
@@ -105,6 +192,10 @@
   }
 }
 
+.mob-menu__link.current{
+    color: var(--title-color);
+}
+
 .hero {
   background-color: var(--primary-bg-color);
   height: 444px;
@@ -121,7 +212,7 @@
 }
 .hero__container {
   min-width: 320px;
-  padding: 0 20px;
+  padding: 0;
   @include tablet {
     min-width: inherit;
     padding: 0;
@@ -131,6 +222,7 @@
 .hero__title-wrap {
   position: absolute;
   z-index: 1;
+  top: 136px;
   @include tablet {
     left: 32px;
     top: 102px;
@@ -139,7 +231,6 @@
 .hero__title {
   display: block;
   width: 218px;
-  padding-top: 136px;
   font-family: 'Titan One';
   @include font(null, 48px, 0.95, 0.04em);
   text-transform: uppercase;
@@ -275,7 +366,9 @@
   @include tablet {
     display: flex;
     flex-direction: column;
-    margin-top: 92px;
+    position: absolute;
+    top: 92px;
+    right: 32px;
   }
 }
 
