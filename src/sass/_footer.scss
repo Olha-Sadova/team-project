@@ -1,8 +1,12 @@
 .footer {
     padding-bottom: 3px;
     background-color:#FFF5F6;
+    @include tablet {
+        padding-bottom: 4px;
+    }
     @include desktop {
         padding-top: 80px;
+        // padding-bottom: 9px;
     }
     
 }
