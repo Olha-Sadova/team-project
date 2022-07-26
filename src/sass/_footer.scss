@@ -1,7 +1,9 @@
 .footer {
     padding-bottom: 3px;
     background:#FFF5F6;
-    
+    @include desktop {
+        padding-top: 80px;
+    }
     
 }
 
@@ -34,7 +36,7 @@ ul{
     padding-left: 0;
 }
 
-    .footer_container {
+    .container {
         padding-left: 20px;
         padding-right: 20px;
         // max-width: 320px;
@@ -52,6 +54,9 @@ ul{
         @include tablet {
             max-width: 340px;
         }
+        @include desktop {
+            max-width: 500px;
+        }
     }
 
 
@@ -68,6 +73,10 @@ ul{
         font-size: 26px;
         line-height: 1.15;
         letter-spacing: 0.04em;
+    }
+    @include desktop {
+        font-size: 30px;
+        line-height: 1.13;
     }
 }
 
@@ -88,6 +97,10 @@ ul{
         letter-spacing: 0.06em;
         margin-top: 12px;
     }
+    @include desktop {
+        font-size: 58px;
+        line-height: 1.14;
+    }
 }
 
 .social__container {
@@ -104,13 +117,16 @@ ul{
     @include tablet {
         margin-top: 60px;
         display: block;
-
+    }
+    @include desktop {
+        margin-top: 0px;
     }
 }
 
 .social__list {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 40px;
 }
 
 
@@ -134,11 +150,21 @@ ul{
     height: 100%;
     border-radius: 50px;
     background: #FEA5BB;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        background: #D41443;}
+}
+
+.social__icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .social__link:hover &,
+    .social__link:focus & {
+    fill: #FFFFFF;}
 }
 
 .footer__address {
     display: flex;
-    margin-top: 40px;
     margin-bottom: 40px;
     @include tablet {
         margin-bottom: 60px;
@@ -157,6 +183,11 @@ ul{
         font-size: 14px;
         line-height: 1.86;
     }
+    @include desktop {
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.02em;
+    }
 }
 
 .footer-tel__link {
@@ -170,6 +201,11 @@ ul{
         font-size: 14px;
         line-height: 1.86;
     }
+    @include desktop {
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.02em;
+    }
 }
 
 .footer-line {
@@ -177,6 +213,11 @@ ul{
     height: 0;
     border: 1px solid #e1e1e1;
     margin: 0 -20px;
+    @include desktop {
+        width: 100%;
+        margin: 0;
+        max-width: none;
+    }
 }
 
 .end__text {
@@ -194,9 +235,9 @@ ul{
         letter-spacing: 0.02em;
     }
 }
+
 br {
     @include tablet {
         display: none;
     }
 }
-
