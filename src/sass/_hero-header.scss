@@ -25,6 +25,19 @@
   padding-top: 8px;
 }
 
+.header-wrap{
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+    @media screen and (min-width: $tablet) {
+        display: none;
+    } 
+     @media screen and (min-width: $desktop) {
+        display: flex;
+
+    } 
+}
+
 .header-mobile-menu {
   background-color: transparent;
   border-color: transparent;
@@ -32,6 +45,35 @@
   @media screen and (min-width: $tablet) {
     margin-left: 293px;
   }
+   @media screen and (min-width: $desktop) {
+        display: none;     
+  } 
+}
+
+.header-menu-list{
+    display: flex;
+    margin-left: 128px;
+}
+
+.header-menu-link{
+    font-family: 'DM Sans', sans-serif;
+    @include font(700, 16px, 1.31, null); 
+    color: var(--white);
+    &:hover, 
+    &:focus{
+      color: var(--title-color);
+    }
+    @mixin transition($tp) {
+    transition: color var(--primary-transition-time) var(--primary-cubic-function);
+}
+}
+
+.header-menu-link.current{
+    color: var(--title-color);
+}
+
+.header-menu-item:not(:last-child){
+    margin-right: 35px;
 }
 
 .mob-btn-buy{
@@ -53,9 +95,16 @@
        background-color: var(--white);
        right: 0;
        margin-left: 32px;
+       &:hover,
+       &:focus{
+        background-color: #E1E1E1;
+       }
+       @mixin transition($tp) {
+       transition: background-color var(--primary-transition-time) var(--primary-cubic-function);
+}
     }
     @media screen and (min-width: $desktop) {
-        
+       margin-left: auto; 
     }
 }
 
@@ -109,11 +158,11 @@
   text-align: center;
   align-items: center;
 }
-.header-menu-list {
+.header-mob-list {
   display: block;
   margin-top: 62px;
 }
-.header-menu-item {
+.header-mob-item {
   display: flex;
   align-items: center;
   width: 100%;
