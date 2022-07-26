@@ -1,27 +1,134 @@
 .gallery {
-    background-image: linear-gradient(to bottom, #FFF5F6 19%, #FAFAFA 19%);
+    background-image: linear-gradient(to bottom, var(--second-bg-color) 19%, var(--white) 19%);
 
+    @include tablet {
+        background-image: linear-gradient(to bottom, #FFF5F6 48%, #FFFFFF 48%);
+    }
+
+    @include desktop {
+        background-image: linear-gradient(to bottom, #FFF5F6 21%, #FFFFFF 21%);
+    }
 }
 
 .gl {
     width: 100%;
-    padding: 0;
-    margin: 0 auto;        
-    
-      
-    @include desktop {       
+    padding: 0 2px;
+    margin: 0 auto;
+
+    @include desktop {
         padding: 0 94px;
-    }        
+    }
 
     &__title {
         display: none;
         font-family: 'Titan One';
-        font-weight: 400;
-        font-size: 34px;
-        line-height: 1.5;
+        @include font(400, 34px, 1.5, 0.04em);
         text-align: center;
-        letter-spacing: 0.04em;
         color: var(--title-color);
-    }    
+    }
 }
 
+.gl__pictures {
+    display: flex;
+    justify-content: center;
+    gap: 2.53px;
+
+    @include tablet {
+        gap: 6px;
+    }
+
+    @include desktop {
+        gap: 8px;
+    }
+}
+
+.gallery__img {
+    display: block;
+    width: 100%;
+
+    &:not(:last-child) {
+        margin-bottom: 2.54px;
+
+        @include tablet {
+            margin-bottom: 6px;            
+        }
+
+        @include desktop {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.border {
+    border-radius: 8px;
+    border: transparent;
+
+    @include tablet {
+        border-radius: 20px;
+    }
+    
+}
+
+.pic5 {
+    width: 50%;
+}
+
+.first-column {
+    margin-top: 47px;
+
+    @include tablet {
+        margin-top: 113px;
+    }
+
+    @include desktop {
+        margin-top: 148px;
+    }
+}
+
+.second-column {
+    margin-top: 27px;
+
+    @include tablet {
+        margin-top: 65px;
+    }
+
+    @include desktop {
+        margin-top: 85px;
+    }
+}
+
+.fourth-column {
+    margin-top: 31px;
+
+    @include tablet {
+        margin-top: 75px;
+    }
+
+    @include desktop {
+        margin-top: 98px;
+    }
+}
+
+.fifth-column {
+    margin-top: 21px;
+
+    @include tablet {
+        margin-top: 50px;
+    }
+
+    @include desktop {
+        margin-top: 66px;
+    }
+}
+
+.sixth-column {
+    margin-top: 50px;
+
+    @include tablet {
+        margin-top: 120px;
+    }
+
+    @include desktop {
+        margin-top: 158px;
+    }
+}
