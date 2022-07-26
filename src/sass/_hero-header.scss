@@ -201,7 +201,7 @@
   background-color: var(--primary-bg-color);
   min-width: 320px;
   padding: 25px 20px 0 20px;
-  height: 444px;
+  height: 502px;
   position: relative;
   overflow: hidden;
   @include tablet {
@@ -219,8 +219,8 @@
 .hero__title-wrap {
   position: absolute;
   z-index: 1;
-  top: 136px;
   left: 20px;
+  top: 194px;
   @include tablet {
     left: 32px;
     top: 102px;
@@ -319,8 +319,8 @@
   width: 346px;
   height: 344px;
   position: absolute;
-  top: 25px;
   left: 36px;
+  top: 83px;
   border-radius: 50%;
   @include tablet {
     width: 335px;
@@ -338,8 +338,8 @@
 .hero__img-wrap {
   position: absolute;
 
-  top: 34px;
-  left: 102px;
+  left: 117px;
+  top: 92px;
   width: 171px;
   height: 410px;
   padding: 0;
@@ -462,11 +462,15 @@
   z-index: -1;
   top: -4px;
   right: -5px;
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background: var(--white);
   transform: matrix(-1, 0, 0, 1, 0, 0);
+  @include desktop {
+    width: 30px;
+    height: 30px;
+  }
 }
 .hero__couner-title {
   font-family: 'Titan One';
