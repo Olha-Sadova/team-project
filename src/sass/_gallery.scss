@@ -10,7 +10,7 @@
     }
 }
 
-.gl {
+.gl-container {
     width: 100%;
     padding: 30px 2px;
     margin: 0 auto;
@@ -21,15 +21,15 @@
     
     @include desktop {
         padding: 60px 94px;
-    }
+    }    
+}
 
-    &__title {
-        display: none;
-        font-family: 'Titan One';
-        @include font(400, 34px, 1.5, 0.04em);
-        text-align: center;
-        color: var(--title-color);
-    }
+.gl__title {
+    display: none;
+    font-family: 'Titan One';
+    @include font(400, 34px, 1.5, 0.04em);
+    text-align: center;
+    color: var(--title-color);
 }
 
 .gl__pictures {
