@@ -1,7 +1,11 @@
 .page-header {
-  background-color: var(--primary-bg-color);
-  width: 100%;
-  background-color: var(--primary-bg-color);
+  background: rgb(253, 187, 45);
+  background: linear-gradient(
+    0deg,
+    rgba(253, 187, 45, 0) 0%,
+    rgba(255, 184, 202, 1) 26%
+  );
+
   position: fixed;
   top: 0;
   z-index: 100;
@@ -191,6 +195,8 @@
   background-color: var(--primary-bg-color);
   width: 100%;
   // padding: 25px 20px 0 20px;
+}
+.hero__container {
   padding-top: 25px;
   margin: 0 auto;
   height: 502px;
@@ -203,6 +209,7 @@
     padding-top: 43px;
   }
   @include desktop {
+    background-color: var(--primary-bg-color);
     width: 1200px;
     height: 664px;
     // padding: 54px 16px 0 16px;
@@ -239,6 +246,10 @@
     @include font(null, 58px, 0.9, 0.04em);
     width: 277px;
   }
+}
+.hero__title-animation {
+  animation: tada;
+  animation-duration: 3000ms;
 }
 .hero__pretitle {
   display: block;
@@ -404,10 +415,16 @@
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  background-color: var(--white);
+  @include transition(background-color);
   @include desktop {
     width: 26px;
     height: 26px;
     margin-top: 20px;
+  }
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
   }
 }
 .hero__legend-icon {
