@@ -35,12 +35,6 @@ ul{
     padding-left: 0;
 }
 
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
-        // max-width: 320px;
-    }
-
     .footer__container {
         @include tablet {
             display: flex;
