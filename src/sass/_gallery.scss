@@ -12,11 +12,15 @@
 
 .gl {
     width: 100%;
-    padding: 0 2px;
-    margin: 0 auto;
-
+        padding: 30px 2px;
+        margin: 0 auto;
+    
     @include desktop {
-        padding: 0 94px;
+        padding-top: 32px;
+    }
+    
+    @include desktop {
+        padding: 60px 94px;
     }
 
     &__title {
