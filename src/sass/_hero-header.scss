@@ -29,6 +29,39 @@
   background-color: transparent;
   border-color: transparent;
   margin-left: 61px;
+  @media screen and (min-width: $tablet) {
+    margin-left: 293px;
+  }
+}
+
+.mob-btn-buy{
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+    @media screen and (min-width: $tablet) {
+       font-family: 'DM Sans', sans-serif;
+       @include font(700, 16px, 1.31, null);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: var(--title-color);
+       border: none;
+       cursor: pointer;
+       width: 160px;
+       height: 44px;
+       border-radius: 22px;
+       background-color: var(--white);
+       right: 0;
+       margin-left: 32px;
+    }
+    @media screen and (min-width: $desktop) {
+        
+    }
+}
+
+.button-buy-icon{
+    top: 19px;
+    margin-left: 25px;
 }
 
 .mobile-menu {
