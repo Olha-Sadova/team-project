@@ -14,12 +14,11 @@
     width: 100%;
    padding: 0 20px;
    overflow: hidden;
-  @include tablet {
+  /*@include tablet {
     display: flex;
     min-width: 768px;
-   
     padding: 0 32px;
-  }
+  }*/
 }
 .header__container{
     width: 100%;
@@ -51,7 +50,7 @@
 .header-mobile-menu {
   background-color: transparent;
   border-color: transparent;
-  margin-left: 61px;
+  margin-left: auto;
   @media screen and (min-width: $tablet) {
     margin-left: 293px;
   }
