@@ -1,19 +1,19 @@
 .gallery {
-    background-image: linear-gradient(to bottom, var(--second-bg-color) 19%, var(--white) 19%);
+    background-image: linear-gradient(to bottom, var(--second-bg-color) 29%, var(--white) 29%);
 
     @include tablet {
-        background-image: linear-gradient(to bottom, #FFF5F6 48%, #FFFFFF 48%);
+        background-image: linear-gradient(to bottom, var(--second-bg-color) 56%, var(--white) 56%);
     }
 
     @include desktop {
-        background-image: linear-gradient(to bottom, #FFF5F6 21%, #FFFFFF 21%);
+        background-image: linear-gradient(to bottom, var(--second-bg-color) 27%, var(--white) 27%);
     }
 }
 
 .gl {
     width: 100%;
-        padding: 30px 2px;
-        margin: 0 auto;
+    padding: 30px 2px;
+    margin: 0 auto;
     
     @include desktop {
         padding-top: 32px;
