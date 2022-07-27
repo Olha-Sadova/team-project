@@ -1,0 +1,158 @@
+
+
+.about {
+  padding: 60px 0;
+  background-color: #fff5f6;
+  position: relative;
+  &__milk-l {
+    display: none;
+    @media screen and (min-width: $desktop) {
+      display: block;
+      position: absolute;
+      bottom: 50px;
+    }
+  }
+  &__top {
+    margin-bottom: 60px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 32px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 40px;
+    }
+  }
+  &__subtitle {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #ffa5ba;
+    @media screen and (min-width: $tablet) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+  }
+  &__title {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #d41443;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 48px;
+      line-height: 1.14;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 58px;
+      line-height: 1.13;
+    }
+  }
+  &__wrapper {
+    position: relative;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+    @media screen and (min-width: $tablet) {
+      margin: 0 32px 0 0;
+    }
+    @media screen and (min-width: $desktop) {
+      margin: 0 100px 0 0;
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin: auto 0;
+  }
+  &__text {
+    width: 220px;
+    position: relative;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #907e82;
+    margin-bottom: 20px;
+    z-index: 1;
+    & > :first-child {
+      color: #000;
+      margin-bottom: 20px;
+      @media screen and (min-width: $desktop) {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+    }
+    & > :nth-last-of-type(2) {
+      margin-bottom: 10px;
+      @media screen and (min-width: $desktop) {
+        margin-bottom: 32px;
+      }
+    }
+    @media screen and (min-width: $tablet) {
+      width: 334px;
+      font-size: 14px;
+      line-height: 1.7;
+      letter-spacing: 0.04em;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 464px;
+      margin-bottom: 40px;
+      line-height: 1.9;
+    }
+  }
+  &__milk {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: 13px 40px;
+    border-radius: 22px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #d41443;
+    background-color: #fff;
+    transition: color linear 0.2s, background-color linear 0.2s;
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: #d41443;
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+  &__icon {
+    margin-left: 14px;
+  }
+}

@@ -2,23 +2,17 @@
     display: none;
 }
 
-.container-advantages {
-    @media screen and (min-width: $mobile) {
-        margin: 0 auto;
-    }
-    @media screen and (min-width: $tablet) {
-        margin: 0;
-    }
-}
-
 .advantages {
     width: 100%;
     background-color: var(--second-bg-color);
-    padding-bottom: 60px;
-    padding-top: 40px;
+    padding-bottom: 30px;
     @media screen and (min-width: $tablet) {
-        padding-bottom: 64px;
-        padding-top: 60px;
+        padding-left: 16px;
+        padding-bottom: 32px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 60px;
+        padding-top: 40px;
     }
 }
 
@@ -28,14 +22,22 @@
     gap: 32px;
     @media screen and (min-width: $tablet) {
         flex-direction: row;
-        gap: 4px;
+        gap: 22px;
+    }
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
 .advantages__item {
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
         max-width: 180px;
     }
+    @media screen and (min-width: $desktop) {
+        width: 288px;
+    }
+    
     &::before {
         content: " ";
         display: block;
@@ -67,6 +69,11 @@ color: var(--title-color);
         padding-top: 36px;
         padding-bottom: 13px;
     }
+    @media screen and (min-width: $desktop) {
+        font-size: 58px;
+        padding-top: 40px;
+        padding-bottom: 16px;
+    }
 }
 
 .advantages__descr {
@@ -75,5 +82,8 @@ font-family: 'DM Sans', sans-serif;
 margin: 0;
     @media screen and (min-width: $tablet) {
         @include font(700, 14px, 1.74, null);
+    }
+    @media screen and (min-width: $desktop) {
+        @include font(700, 16px, 1.76, 0.02em);
     }
 }

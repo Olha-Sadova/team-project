@@ -7,7 +7,18 @@ ul {
 }
 
 .contacts {
-  background-image: linear-gradient(#fafafa 0 25%, #fff5f6 25% 100%);
+  background-image: linear-gradient(to bottom, #fff 0 25%, #fff5f6 25% 100%);
+  padding-top: 30px;
+  padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to bottom, #fff 0 51%, #fff5f6 51% 100%);
+    padding-top: 40px;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(to bottom, #fff 0 28%, #fff5f6 28% 100%);
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
 }
 
 .contacts__title {
@@ -22,30 +33,40 @@ ul {
   padding-bottom: 94px;
 }
 
-.contacts-container {
-  padding: 70px 20px 40px;
-  width: 100%;
-  margin: 0 auto;
-  @media screen and (min-width: 320px) {
-    width: 320px;
+.contacts-cards {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    justify-content: center;
   }
-}
-
-.contacts-div {
-  padding: 40px 32px 40px 32px;
 }
 
 .contacts-cards__item {
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-  height: 412px;
-  width: 280px;
+  height: 100%;
+  width: 100%;
   border-radius: 24px;
   margin-bottom: 10px;
+  padding: 40px 32px 40px 32px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 32px;
+    width: 224px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 40px 40px 35px 40px;
+    width: 368px;
+  }
 }
 
 .contacts-cards__item:last-child {
   margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
 }
 
 .contacts-list__place {
@@ -60,6 +81,16 @@ ul {
   border-radius: 4px;
   font-family: 'DM Sans';
   margin: 0;
+  line-height: 1.5;
+  @media screen and (min-width: 768px) {
+    width: 73px;
+    height: 28px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 75px;
+  }
 }
 
 .contacts-list__place--green {
@@ -75,6 +106,15 @@ ul {
   font-family: 'DM Sans';
   justify-content: center;
   margin: 0;
+  line-height: 1.5;
+  @media screen and (min-width: 768px) {
+    width: 138px;
+    height: 28px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .contacts-cards__city {
@@ -84,6 +124,15 @@ ul {
   letter-spacing: 0.04em;
   margin-top: 0;
   margin-bottom: 8px;
+  line-height: 186%;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
 }
 
 .contacts-cards__text {
@@ -92,27 +141,50 @@ ul {
   font-weight: 500;
   margin: 0;
   line-height: 1.5;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    width: 250px;
+  }
 }
 
 .contacts-list {
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid rgba(225, 225, 225, 1);
-  width: 216px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 32px;
+    padding-top: 32px;
+    width: 160px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 288px;
+  }
 }
 
 .contacts-list-firstpart {
   padding-top: 20px;
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+  }
 }
 
 .contacts-list-tel {
   padding-top: 24px;
-  padding-bottom: 40px;
   border-bottom: none;
+  padding-bottom: 0;
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+  }
 }
 
 .contacts-list__item:not(:last-child) {
   margin-bottom: 8px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 12px;
+  }
 }
 
 .contacts-list__day {
@@ -122,6 +194,13 @@ ul {
   margin-bottom: 8px;
   margin-top: 0;
   font-family: 'DM Sans';
+  line-height: 186%;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
 
 .contacts-list__time {
@@ -131,6 +210,12 @@ ul {
   margin: 0;
   font-family: 'DM Sans';
   line-height: 186%;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
 
 .mail,
@@ -139,6 +224,12 @@ ul {
   font-size: 12px;
   font-weight: 500;
   line-height: 1.5;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
 
 .mail:hover,
@@ -148,17 +239,28 @@ ul {
   color: rgba(243, 33, 191, 0.553);
 }
 
-.contacts-list-tel {
-  padding-bottom: 40px;
+.buttons-div {
+  text-align: center;
 }
 
 .buttons-contacts {
   text-align: center;
   width: 100%;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .buttons-contacts__item {
   margin-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+  }
 }
 
 .buttons-contacts__item:last-child {
@@ -177,6 +279,22 @@ ul {
   color: var(--white);
   border: transparent;
   cursor: pointer;
+  @media screen and (min-width: 768px) {
+    width: 191px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 198px;
+  }
+}
+
+.buttons-contacts__locations:hover,
+.buttons-contacts__locations:focus {
+  color: #ffa5ba;
+}
+
+.buttons-contacts__franchise:hover,
+.buttons-contacts__franchise:focus {
+  color: #ffa5ba;
 }
 
 .buttons-contacts__franchise {
@@ -191,6 +309,12 @@ ul {
   color: #d41443;
   border: transparent;
   cursor: pointer;
+  @media screen and (min-width: 768px) {
+    width: 174px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 168px;
+  }
 }
 
 .buttons-contacts__vector {
