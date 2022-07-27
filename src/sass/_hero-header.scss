@@ -1,15 +1,12 @@
-.page-header {
-  background: rgb(253, 187, 45);
+.page-header { 
   background: linear-gradient(
     0deg,
     rgba(253, 187, 45, 0) 0%,
     rgba(255, 184, 202, 1) 26%
   );
-
   position: fixed;
   top: 0;
   z-index: 100;
-
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
@@ -122,7 +119,6 @@
   position: fixed;
   z-index: 2;
   top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
   padding: 20px;
@@ -135,12 +131,13 @@
   &.is-shown {
     transform: translateY(0%);
   }
-  @media screen and (min-width: $tablet) {
-    height: 100%;
-    width: 254px;
-    right: 0;
-    transition: opacity 350ms linear, visibility 350ms linear;
-  }
+  
+   @media screen and (min-width: $tablet) {
+        height: 100%;
+        width: 33%;
+        right: 0;
+        transition: opacity 350ms linear, visibility 350ms linear;
+    } 
 }
 
 .mobile-close-button {
@@ -162,7 +159,7 @@
   width: 209px;
   height: 44px;
   margin-top: 60px;
-  margin-right: 16px;
+  margin-right: auto;
   margin-left: auto;
   padding: auto;
   background-color: var(--white);
