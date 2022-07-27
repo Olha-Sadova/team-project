@@ -133,6 +133,7 @@
   padding: 20px;
   transition: opacity 350ms linear, visibility 350ms linear;
    @media screen and (min-width: $tablet) {
+        height: 100%;
         width: 50%;
         left: 25%;
         transition: opacity 350ms linear, visibility 350ms linear;
