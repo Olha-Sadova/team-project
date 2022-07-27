@@ -1,4 +1,4 @@
-<section class="products" >
+<section id="products-scroll" class="products">
   <div class="products__container">
     <p class="products__pretitle">100% natural</p>
     <h2 class="products__title">Products</h2>
@@ -9,11 +9,40 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
         </p>
-        <button type="button" class="products__button">
-          <svg class="products__icon" width="40" height="40">
-            <use href="./images/image.svg#icon-arrow"></use>
-          </svg>
-        </button>
+
+        <div class="products__modal-container">
+          <button type="button" class="products__button" data-modal-id="modal1">
+            <svg class="products__icon" width="40" height="40">
+              <use href="./images/image.svg#icon-arrow"></use>
+            </svg>
+          </button>
+
+          <div class="products__modal" id="modal1">
+            <div class="products__modal-content">
+              <button type="button" class="products__modal-close">x</button>
+              <div class="products__modal-body">
+                <h4 class="products__modal-name">Flavors we offer</h4>
+                <ul class="products__modal-list">
+                  <li class="products__modal-item">Vanilla</li>
+                  <li class="products__modal-item">Chocolate</li>
+                  <li class="products__modal-item">Cookies & Cream</li>
+                  <li class="products__modal-item">Mint Chocolate Chip</li>
+                  <li class="products__modal-item">
+                    Chocolate Chip Cookie Dough
+                  </li>
+                  <li class="products__modal-item">Buttered Pecan</li>
+                  <li class="products__modal-item">Strawberry</li>
+                </ul>
+                <p class="products__modal-info">
+                  About 70% of the ingredients in ice cream come from milk,
+                  although mixes often contain natural ingredients like sugar
+                  and fruit. There are no added preservatives as ice cream is
+                  preserved naturally by freezing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </li>
       <li class="products__item">
         <h3 class="products__name">Ice coffee</h3>
@@ -21,11 +50,37 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
         </p>
-        <button type="button" class="products__button">
-          <svg class="products__icon" width="40" height="40">
-            <use href="./images/image.svg#icon-arrow"></use>
-          </svg>
-        </button>
+        <div class="products__modal-container">
+          <button type="button" class="products__button" data-modal-id="modal2">
+            <svg class="products__icon" width="40" height="40">
+              <use href="./images/image.svg#icon-arrow"></use>
+            </svg>
+          </button>
+
+          <div class="products__modal" id="modal2">
+            <div class="products__modal-content">
+              <button type="button" class="products__modal-close">x</button>
+              <div class="products__modal-body">
+                <h4 class="products__modal-name">Flavors we offer</h4>
+                <ul class="products__modal-list">
+                  <li class="products__modal-item">Banana Cream Coffee</li>
+                  <li class="products__modal-item">Caramel Mocha Latte</li>
+                  <li class="products__modal-item">Cinnamon Sugar Cookie</li>
+                  <li class="products__modal-item">Blueberry Cinnamon Latte</li>
+                  <li class="products__modal-item">
+                    Chocolate Covered Espresso
+                  </li>
+                  <li class="products__modal-item">Chocolate Mint</li>
+                  <li class="products__modal-item">Orange Vanilla Swirl Cappuccino</li>
+                </ul>
+                <p class="products__modal-info">
+                  Ingredients: ice (or coffee frozen into cubes), coffee, at room temperature or chilled,
+                  cream, milk or half & half, granulated white sugar (or simple syrup).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </li>
       <li class="products__item">
         <h3 class="products__name">Milkshakes</h3>
@@ -33,11 +88,40 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
         </p>
-        <button type="button" class="products__button">
-          <svg class="products__icon" width="40" height="40">
-            <use href="./images/image.svg#icon-arrow"></use>
-          </svg>
-        </button>
+        <div class="products__modal-container">
+          <button type="button" class="products__button" data-modal-id="modal3">
+            <svg class="products__icon" width="40" height="40">
+              <use href="./images/image.svg#icon-arrow"></use>
+            </svg>
+          </button>
+
+          <div class="products__modal" id="modal3">
+            <div class="products__modal-content">
+              <button type="button" class="products__modal-close">x</button>
+              <div class="products__modal-body">
+                <h4 class="products__modal-name">Flavors we offer</h4>
+                <ul class="products__modal-list">
+                  <li class="products__modal-item">Vanilla special</li>
+                  <li class="products__modal-item">Cool mint</li>
+                  <li class="products__modal-item">Strawberry marshallow</li>
+                  <li class="products__modal-item">Blueberry cheesecake</li>
+                  <li class="products__modal-item">
+                    Raspberry and white chocolate
+                  </li>
+                  <li class="products__modal-item">Pina colada</li>
+                  <li class="products__modal-item">Triple nut caramel</li>
+                </ul>
+                <p class="products__modal-info">
+                  A milkshake (sometimes simply called a shake) is a sweet beverage 
+                  made by blending milk, ice cream, and flavorings or sweeteners such as 
+                  butterscotch, caramel sauce, chocolate syrup, fruit syrup, or whole 
+                  fruit into a thick, sweet, cold mixture.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
       </li>
     </ul>
   </div>

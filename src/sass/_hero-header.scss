@@ -1,28 +1,20 @@
 .page-header {
-  background-color: var(--primary-bg-color);
-  height: 416px;
-   width: 100%;
-    
+  background: rgb(253, 187, 45);
+  background: linear-gradient(
+    0deg,
+    rgba(253, 187, 45, 0) 0%,
+    rgba(255, 184, 202, 1) 26%
+  );
+
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
-.header-hero__container {
-    background-color: var(--primary-bg-color);
-    position: fixed;
-    top: 0;
-    z-index: 100;
-
-    width: 100%;
-   padding: 0 20px;
-   overflow: hidden;
-  /*@include tablet {
-    display: flex;
-    min-width: 768px;
-    padding: 0 32px;
-  }*/
-}
-.header__container{
-    width: 100%;
-}
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -30,20 +22,21 @@
 }
 .header-nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-top: 8px;
 }
 
-.header-wrap{
-    @media screen and (min-width: $mobile) {
-        display: none;
-    }
-    @media screen and (min-width: $tablet) {
-        display: none;
-    } 
-     @media screen and (min-width: $desktop) {
-        display: flex;
-    } 
+.header-wrap {
+  @media screen and (min-width: $mobile) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
 
 .header-mobile-menu {
@@ -53,73 +46,75 @@
   @media screen and (min-width: $tablet) {
     margin-left: 293px;
   }
-   @media screen and (min-width: $desktop) {
-        display: none;     
-  } 
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 
-.header-menu-list{
-    display: flex;
-    margin-left: 128px;
+.header-menu-list {
+  display: flex;
+  margin-left: 128px;
 }
 
-.header-menu-link{
+.header-menu-link {
+  font-family: 'DM Sans', sans-serif;
+  @include font(700, 16px, 1.31, null);
+  color: var(--white);
+  &:hover,
+  &:focus {
+    color: var(--title-color);
+  }
+  @mixin transition($tp) {
+    transition: color var(--primary-transition-time)
+      var(--primary-cubic-function);
+  }
+}
+
+.header-menu-link.current {
+  color: var(--title-color);
+}
+
+.header-menu-item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.mob-btn-buy {
+  @media screen and (min-width: $mobile) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
     font-family: 'DM Sans', sans-serif;
-    @include font(700, 16px, 1.31, null); 
-    color: var(--white);
-    &:hover, 
-    &:focus{
-      color: var(--title-color);
+    @include font(700, 16px, 1.31, null);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--title-color);
+    border: none;
+    cursor: pointer;
+    width: 160px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: var(--white);
+    right: 0;
+    margin-left: 32px;
+    &:hover,
+    &:focus {
+      background-color: #e1e1e1;
     }
     @mixin transition($tp) {
-    transition: color var(--primary-transition-time) var(--primary-cubic-function);
-}
-}
-
-.header-menu-link.current{
-    color: var(--title-color);
-}
-
-.header-menu-item:not(:last-child){
-    margin-right: 35px;
-}
-
-.mob-btn-buy{
-    @media screen and (min-width: $mobile) {
-        display: none;
+      transition: background-color var(--primary-transition-time)
+        var(--primary-cubic-function);
     }
-    @media screen and (min-width: $tablet) {
-       font-family: 'DM Sans', sans-serif;
-       @include font(700, 16px, 1.31, null);
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       color: var(--title-color);
-       border: none;
-       cursor: pointer;
-       width: 160px;
-       height: 44px;
-       border-radius: 22px;
-       background-color: var(--white);
-       right: 0;
-       margin-left: 32px;
-       &:hover,
-       &:focus{
-        background-color: #E1E1E1;
-       }
-       @mixin transition($tp) {
-       transition: background-color var(--primary-transition-time) var(--primary-cubic-function);
-}
-    }
-    @media screen and (min-width: $desktop) {
-       margin-left: auto;
-       right: 0; 
-    }
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+    right: 0;
+  }
 }
 
-.button-buy-icon{
-    top: 19px;
-    margin-left: 25px;
+.button-buy-icon {
+  top: 19px;
+  margin-left: 25px;
 }
 
 .mobile-menu {
@@ -160,7 +155,7 @@
   width: 209px;
   height: 44px;
   margin-top: 60px;
-  margin-right: auto;
+  margin-right: 16px;
   margin-left: auto;
   padding: auto;
   background-color: var(--white);
@@ -200,40 +195,48 @@
   }
 }
 
-.mob-menu__link.current{
-    color: var(--title-color);
+.mob-menu__link.current {
+  color: var(--title-color);
 }
 
 .hero {
   background-color: var(--primary-bg-color);
-  height: 444px;
-  position: relative;
-  padding-top: 25px;
-  padding-bottom: 0;
-
-  @include tablet {
-    position: initial;
-    width: 768px;
-    height: 416px;
-    padding-top: 0;
-  }
+  width: 100%;
+  // padding: 25px 20px 0 20px;
 }
 .hero__container {
-  min-width: 320px;
-  padding: 0;
+  padding-top: 25px;
+  margin: 0 auto;
+  height: 502px;
+  position: relative;
+  overflow: hidden;
   @include tablet {
-    min-width: inherit;
-    padding: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 416px;
+    padding-top: 43px;
+  }
+  @include desktop {
+    background-color: var(--primary-bg-color);
+    width: 1200px;
+    height: 664px;
+    // padding: 54px 16px 0 16px;
+    padding-top: 54px;
   }
 }
 
 .hero__title-wrap {
   position: absolute;
   z-index: 1;
-  top: 136px;
+  left: 20px;
+  top: 194px;
   @include tablet {
     left: 32px;
     top: 102px;
+  }
+  @include desktop {
+    left: 16px;
+    top: 147px;
   }
 }
 .hero__title {
@@ -246,9 +249,17 @@
   @include tablet {
     @include font(null, 34px, 0.91, 0.04em);
     width: 162px;
-    padding-top: 20px;
+  }
+  @include desktop {
+    @include font(null, 58px, 0.9, 0.04em);
+    width: 277px;
   }
 }
+.hero__title-animation {
+  animation: tada;
+  animation-duration: 3000ms;
+}
+
 .hero__pretitle {
   display: block;
   font-family: 'Titan One';
@@ -259,46 +270,74 @@
   @include tablet {
     @include font(null, 22px, 1.14, 0.04em);
   }
+  @include desktop {
+    @include font(null, 38px, 1.16, null);
+  }
 }
 .hero__list {
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-.hero__item {
-  &:not(:last-child) {
-    margin-right: 8px;
+  @include desktop {
+    margin-top: 24px;
   }
 }
-.hero__btn {
-  border-color: transparent;
+.hero__item {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   border-radius: 20px;
   height: 24px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-family: 'DM Sans', sans-serif;
+  @include font(null, 8px, 1.25, null);
+  @include transition(background-color);
+  @include desktop {
+    height: 40px;
+    @include font(null, 14px, 1.29, null);
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  &:not(:last-child) {
+    margin-right: 8px;
+    @include desktop {
+      margin-right: 12px;
+    }
+  }
 }
-.hero__btn#products {
+.hero__item#products {
   background-color: var(--title-color);
   color: var(--white);
   width: 61.2px;
+  &:hover,
+  &:focus {
+    background-color: var(--circle);
+  }
+  @include desktop {
+    width: 107px;
+  }
 }
-.hero__btn#about {
+.hero__item#about {
   background-color: var(--white);
   color: var(--title-color);
   width: 82.8px;
-}
-.hero__btn-link {
-  font-family: 'DM Sans', sans-serif;
-  @include font(null, 8px, 1.25, null);
-  display: block;
-  align-items: center;
-  text-align: center;
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+  @include desktop {
+    width: 138px;
+  }
 }
 .circle {
   background-color: var(--circle);
   width: 346px;
   height: 344px;
   position: absolute;
-  top: 25px;
   left: 36px;
+  top: 83px;
   border-radius: 50%;
   @include tablet {
     width: 335px;
@@ -306,11 +345,18 @@
     left: 248px;
     top: 43px;
   }
+  @include desktop {
+    width: 534px;
+    height: 534px;
+    left: 517px;
+    top: 54px;
+  }
 }
 .hero__img-wrap {
   position: absolute;
-  top: 34px;
-  left: 102px;
+
+  left: 117px;
+  top: 92px;
   width: 171px;
   height: 410px;
   padding: 0;
@@ -319,6 +365,12 @@
     top: 80px;
     width: 143px;
     height: 336px;
+  }
+  @include desktop {
+    width: 236px;
+    height: 557px;
+    left: 636px;
+    top: 108px;
   }
 }
 .hero__img {
@@ -335,6 +387,12 @@
     left: 32px;
     top: 246px;
   }
+  @include desktop {
+    width: 213px;
+    height: 216px;
+    left: 16px;
+    top: 388px;
+  }
 }
 .hero__legend-wrap {
   display: none;
@@ -345,12 +403,20 @@
     left: 184px;
     top: 287px;
   }
+  @include desktop {
+    width: 200px;
+    left: 229px;
+    top: 456px;
+  }
 }
 .hero__legend {
   display: block;
   font-family: 'DM Sans', sans-serif;
   @include font(null, 8px, 1.5, null);
   color: var(--white);
+  @include desktop {
+    @include font(null, 14px, 1.29, null);
+  }
 }
 .hero__legend-btn {
   display: flex;
@@ -361,12 +427,27 @@
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  background-color: var(--white);
+  @include transition(background-color);
+  @include desktop {
+    width: 26px;
+    height: 26px;
+    margin-top: 20px;
+  }
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
 }
 .hero__legend-icon {
   display: block;
   align-items: center;
   justify-content: center;
   fill: var(--title-color);
+  @include desktop {
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .hero__counter-list {
@@ -378,15 +459,25 @@
     top: 92px;
     right: 32px;
   }
+  @include desktop {
+    top: 152px;
+    right: 16px;
+  }
 }
 
 .hero__counter-item {
   position: relative;
   z-index: 0;
   margin-right: 8px;
+  @include desktop {
+    margin-right: 18px;
+  }
   &:not(:last-child) {
     margin-bottom: 16px;
     display: block;
+    @include desktop {
+      margin-bottom: 26px;
+    }
   }
 }
 .hero__mini-circle {
@@ -394,11 +485,15 @@
   z-index: -1;
   top: -4px;
   right: -5px;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background: var(--white);
   transform: matrix(-1, 0, 0, 1, 0, 0);
+  @include desktop {
+    width: 30px;
+    height: 30px;
+  }
 }
 .hero__couner-title {
   font-family: 'Titan One';
@@ -406,12 +501,18 @@
   text-align: right;
   text-transform: uppercase;
   color: var(--title-color);
+  @include desktop {
+    @include font(null, 46px, 1.15, null);
+  }
 }
 .hero__counter-text {
   font-family: 'DM Sans', sans-serif;
   @include font(null, 8px, 1.25, null);
   text-align: right;
   color: var(--white);
+  @include desktop {
+    @include font(null, 14px, 1.29, null);
+  }
 }
 .hero__tasty-img-wrap {
   display: none;
@@ -422,6 +523,12 @@
     height: 150px;
     right: 32px;
     top: 265px;
+  }
+  @include desktop {
+    width: 304px;
+    height: 241px;
+    right: 16px;
+    top: 423px;
   }
 }
 
