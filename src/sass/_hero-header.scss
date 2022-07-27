@@ -127,10 +127,19 @@
   height: 100vh;
   padding: 20px;
   transition: opacity 350ms linear, visibility 350ms linear;
+
+  overflow: auto;
+  transform: translateY(-100%);
+  transition: transform 250ms var(--timing-function);
+
+
+  &.is-shown {
+    transform: translateY(0%);
+  }
    @media screen and (min-width: $tablet) {
         height: 100%;
-        width: 50%;
-        left: 25%;
+        width: 254px;
+        right: 0;
         transition: opacity 350ms linear, visibility 350ms linear;
         
     } 
