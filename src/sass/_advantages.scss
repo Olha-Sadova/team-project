@@ -6,11 +6,9 @@
     width: 100%;
     background-color: var(--second-bg-color);
     padding-bottom: 30px;
-    padding-top: 40px;
     @media screen and (min-width: $tablet) {
         padding-left: 16px;
         padding-bottom: 32px;
-        padding-top: 60px;
     }
     @media screen and (min-width: $desktop) {
         padding-bottom: 60px;
@@ -24,7 +22,7 @@
     gap: 32px;
     @media screen and (min-width: $tablet) {
         flex-direction: row;
-        gap: 4px;
+        gap: 22px;
     }
     @media screen and (min-width: $desktop) {
         flex-direction: row;

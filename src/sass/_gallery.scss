@@ -33,17 +33,18 @@
 }
 
 .gl__pictures {
-    display: flex;
     justify-content: center;
-    gap: 2.53px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr;
+    grid-gap: 2.54px;
 
     @include tablet {
-        gap: 6px;
+        grid-gap: 6px;            
     }
-
+    
     @include desktop {
-        gap: 8px;
-    }
+        grid-gap: 8px;
+    }   
 }
 
 .gallery__img {
@@ -69,8 +70,7 @@
 
     @include tablet {
         border-radius: 20px;
-    }
-    
+    }    
 }
 
 .pic5 {
@@ -78,61 +78,21 @@
 }
 
 .first-column {
-    margin-top: 47px;
-
-    @include tablet {
-        margin-top: 113px;
-    }
-
-    @include desktop {
-        margin-top: 148px;
-    }
+    margin-top: 100%;
 }
 
 .second-column {
-    margin-top: 27px;
-
-    @include tablet {
-        margin-top: 65px;
-    }
-
-    @include desktop {
-        margin-top: 85px;
-    }
+    margin-top: 59%;
 }
 
 .fourth-column {
-    margin-top: 31px;
-
-    @include tablet {
-        margin-top: 75px;
-    }
-
-    @include desktop {
-        margin-top: 98px;
-    }
+    margin-top: 70%;
 }
 
 .fifth-column {
-    margin-top: 21px;
-
-    @include tablet {
-        margin-top: 50px;
-    }
-
-    @include desktop {
-        margin-top: 66px;
-    }
+    margin-top: 44%;
 }
 
 .sixth-column {
-    margin-top: 50px;
-
-    @include tablet {
-        margin-top: 120px;
-    }
-
-    @include desktop {
-        margin-top: 158px;
-    }
+    margin-top: 105%;
 }
