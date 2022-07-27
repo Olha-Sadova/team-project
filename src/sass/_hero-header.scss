@@ -132,17 +132,15 @@
   transform: translateY(-100%);
   transition: transform 250ms var(--timing-function);
 
-
   &.is-shown {
     transform: translateY(0%);
   }
-   @media screen and (min-width: $tablet) {
-        height: 100%;
-        width: 254px;
-        right: 0;
-        transition: opacity 350ms linear, visibility 350ms linear;
-        
-    } 
+  @media screen and (min-width: $tablet) {
+    height: 100%;
+    width: 254px;
+    right: 0;
+    transition: opacity 350ms linear, visibility 350ms linear;
+  }
 }
 
 .mobile-close-button {
@@ -239,6 +237,7 @@
   z-index: 1;
   left: 20px;
   top: 194px;
+  transform: translateX(5%);
   @include tablet {
     left: 32px;
     top: 102px;
@@ -296,6 +295,17 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  &:not(:last-child) {
+    margin-right: 8px;
+    @include desktop {
+      margin-right: 12px;
+    }
+  }
+}
+.hero__btn {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   border-radius: 20px;
   height: 24px;
   padding-top: 7px;
@@ -309,14 +319,8 @@
     padding-top: 11px;
     padding-bottom: 11px;
   }
-  &:not(:last-child) {
-    margin-right: 8px;
-    @include desktop {
-      margin-right: 12px;
-    }
-  }
 }
-.hero__item#products {
+.hero__btn#products {
   background-color: var(--title-color);
   color: var(--white);
   width: 61.2px;
@@ -328,7 +332,7 @@
     width: 107px;
   }
 }
-.hero__item#about {
+.hero__btn#about {
   background-color: var(--white);
   color: var(--title-color);
   width: 82.8px;
@@ -340,6 +344,11 @@
     width: 138px;
   }
 }
+.hero__btn-link {
+  width: 100%;
+  height: 100%;
+}
+
 .circle {
   background-color: var(--circle);
   width: 346px;
@@ -348,6 +357,10 @@
   left: 36px;
   top: 83px;
   border-radius: 50%;
+  @media screen and (min-width: 418px) {
+    left: inherit;
+    right: 36px;
+  }
   @include tablet {
     width: 335px;
     height: 333px;
@@ -369,6 +382,10 @@
   width: 171px;
   height: 410px;
   padding: 0;
+  @media screen and (min-width: 418px) {
+    left: inherit;
+    right: 130px;
+  }
   @include tablet {
     left: 322px;
     top: 80px;
@@ -540,4 +557,3 @@
     top: 423px;
   }
 }
-
