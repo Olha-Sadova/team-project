@@ -291,10 +291,21 @@
   }
 }
 .hero__item {
-  display: block;
-  align-items: center;
+  display: flex;
+
   justify-content: center;
+  align-items: center;
   text-align: center;
+  border-radius: 20px;
+  height: 24px;
+
+  font-family: 'DM Sans', sans-serif;
+  @include font(null, 8px, 1.25, null);
+  @include transition(background-color);
+  @include desktop {
+    height: 40px;
+    @include font(null, 14px, 1.29, null);
+  }
   &:not(:last-child) {
     margin-right: 8px;
     @include desktop {
@@ -302,25 +313,8 @@
     }
   }
 }
-.hero__btn {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 20px;
-  height: 24px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  font-family: 'DM Sans', sans-serif;
-  @include font(null, 8px, 1.25, null);
-  @include transition(background-color);
-  @include desktop {
-    height: 40px;
-    @include font(null, 14px, 1.29, null);
-    padding-top: 11px;
-    padding-bottom: 11px;
-  }
-}
-.hero__btn#products {
+
+.hero__item#products {
   background-color: var(--title-color);
   color: var(--white);
   width: 61.2px;
@@ -332,7 +326,7 @@
     width: 107px;
   }
 }
-.hero__btn#about {
+.hero__item#about {
   background-color: var(--white);
   color: var(--title-color);
   width: 82.8px;
@@ -347,8 +341,11 @@
 .hero__btn-link {
   width: 100%;
   height: 100%;
+  padding: 7px 0;
+  @include desktop {
+    padding: 11px 0;
+  }
 }
-
 .circle {
   background-color: var(--circle);
   width: 346px;
