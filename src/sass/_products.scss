@@ -89,6 +89,7 @@
   }
   @include tablet {
     padding: 40px 32px;
+    width: calc((100% - 32px) / 2);
     &::before {
       max-width: 224px;
       width: 100%;
@@ -212,12 +213,15 @@
 
 .products__text {
   margin-top: 70px;
+  // height: 124px;
   font-family: 'DM Sans';
   @include font(700, 14px, 1.52, 0.04em);
   @include tablet {
+    height: 150px;
     line-height: 1.76;
   }
   @include desktop {
+    height: 106px;
     font-size: 16px;
   }
 }
@@ -291,7 +295,6 @@
   transform: translate(50%, -50%);
   font-size: 25px;
   font-weight: 700;
-  
 }
 
 .products__modal-name {
