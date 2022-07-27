@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+
+  
+
   $(document).click(function (event) {
     //if you click on anything except the modal itself or the "open modal" link, close the modal
     if ($('.products__modal').hasClass('open')) {
