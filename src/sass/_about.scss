@@ -1,5 +1,3 @@
-
-
 .about {
   padding: 60px 0;
   background-color: #fff5f6;
@@ -143,13 +141,7 @@
     transition: color linear 0.2s, background-color linear 0.2s;
     &:hover,
     &:focus {
-      color: #fff;
-      background-color: #d41443;
-      svg {
-        path {
-          stroke: #fff;
-        }
-      }
+      background-color: #ecebeb;
     }
   }
   &__icon {
