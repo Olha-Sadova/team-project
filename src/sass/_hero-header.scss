@@ -131,6 +131,13 @@
   width: 100vw;
   height: 100vh;
   padding: 20px;
+  transition: opacity 350ms linear, visibility 350ms linear;
+   @media screen and (min-width: $tablet) {
+        width: 50%;
+        left: 25%;
+        transition: opacity 350ms linear, visibility 350ms linear;
+        top: 25%;
+    } 
 }
 
 .mobile-close-button {
@@ -416,3 +423,4 @@
     top: 265px;
   }
 }
+
