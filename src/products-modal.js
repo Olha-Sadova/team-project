@@ -30,4 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+
+  $('.products__button').on('click', function () {
+    $('body').toggleClass('no-scroll');
+  });
+
+  $('.products__modal-close').on('click', function () {
+    $('body').removeClass('no-scroll');
+  });
 });
