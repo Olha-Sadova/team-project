@@ -1,0 +1,20 @@
+:root {
+    --primary-bg-color: #ffb8ca;
+    --second-bg-color: #fff5f6;
+    --third-bg-color: #e5e5e5;
+    --fourth-bg-color: #f0d1a5;
+    --fifth-bg-color: #c2e297;
+    --title-color: #d41443;
+    --white: #ffffff;
+    --black: #000000;
+    --text-color: #907e82;
+    --circle: #ffa5ba;
+    --bg-mobile: #e17992;
+    --ft-icons: #fea5bb;
+  }
+  $mobile: 320px;
+  $tablet: 768px;
+  $desktop: 1200px;
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap');
