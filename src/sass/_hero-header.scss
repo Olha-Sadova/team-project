@@ -178,7 +178,7 @@
 }
 .mob-menu__link {
   color: var(--white);
-  font-family: 'DM Sans';
+  font-family: 'DM Sans',sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
@@ -230,7 +230,7 @@
 .hero__title {
   display: block;
   width: 218px;
-  font-family: 'Titan One';
+  font-family: 'Titan One',sans-serif;
   @include font(null, 48px, 0.95, 0.04em);
   text-transform: uppercase;
   color: var(--title-color);
@@ -250,7 +250,7 @@
 
 .hero__pretitle {
   display: block;
-  font-family: 'Titan One';
+  font-family: 'Titan One',sans-serif;
   @include font(null, 26px, 1.15, 0.04em);
   text-transform: uppercase;
   color: var(--white);
@@ -499,7 +499,7 @@
   }
 }
 .hero__couner-title {
-  font-family: 'Titan One';
+  font-family: 'Titan One',sans-serif;
   @include font(null, 28px, 1.14, 0.04em);
   text-align: right;
   text-transform: uppercase;

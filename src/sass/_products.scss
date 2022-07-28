@@ -25,7 +25,7 @@
 .products__title,
 .products__name {
   text-transform: uppercase;
-  font-family: 'Titan One';
+  font-family: 'Titan One',sans-serif;
 }
 
 .products__pretitle {
@@ -223,7 +223,7 @@
 
 .products__text {
   margin-top: 70px;
-  font-family: 'DM Sans';
+  font-family: 'DM Sans',sans-serif;
   @include font(700, 14px, 1.52, 0.04em);
   @include tablet {
     flex-grow: 2;
