@@ -25,13 +25,7 @@
     }    
 }
 
-.gl__title {
-    display: none;
-    font-family: 'Titan One';
-    @include font(400, 34px, 1.5, 0.04em);
-    text-align: center;
-    color: var(--title-color);
-}
+
 
 .gl__pictures {
     justify-content: center;
