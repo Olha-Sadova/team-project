@@ -2,12 +2,20 @@
     display: none;
 }
 
+.advantages__container {
+    @media screen and (min-width: $tablet) {
+        padding-left: 32px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-left: 16px;
+    }
+}
+
 .advantages {
     width: 100%;
     background-color: var(--second-bg-color);
     padding-bottom: 30px;
     @media screen and (min-width: $tablet) {
-        padding-left: 16px;
         padding-bottom: 32px;
     }
     @media screen and (min-width: $desktop) {
@@ -45,34 +53,46 @@
         height: 50px;
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
     }
     &:first-child::before {
         background-image: url(../images/adv1.png);
+        @include retina {
+            background-image: url(../images/adv1-x2.png);
+        }
     }
     &:nth-child(2)::before {
         background-image: url(../images/adv2.png);
+        @include retina {
+            background-image: url(../images/adv2-x2.png);
+        }
     }
+    
     &:nth-child(3)::before {
         background-image: url(../images/adv3.png);
+        @include retina {
+            background-image: url(../images/adv3-x2.png);
+        }
     }
+    
 }
 
 .advantages__title {
 font-family: 'Titan One';
 @include font(null, 36px, 1.14, 0.04em);
 text-transform: uppercase;
-padding-top: 16px;
-padding-bottom: 4px;
+margin-top: 16px;
+margin-bottom: 4px;
 color: var(--title-color);
     @media screen and (min-width: $tablet) {
         font-size: 48px;
-        padding-top: 36px;
-        padding-bottom: 13px;
+        margin-top: 36px;
+        margin-bottom: 13px;
     }
     @media screen and (min-width: $desktop) {
         font-size: 58px;
-        padding-top: 40px;
-        padding-bottom: 16px;
+        margin-top: 40px;
+        margin-bottom: 16px;
     }
 }
 
