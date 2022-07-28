@@ -67,9 +67,6 @@
   }
 }
 
-.header-menu-link.current {
-  color: var(--title-color);
-}
 
 .header-menu-item:not(:last-child) {
   margin-right: 35px;
@@ -190,9 +187,6 @@
   }
 }
 
-.mob-menu__link.current {
-  color: var(--title-color);
-}
 
 .hero {
   background-color: var(--primary-bg-color);
